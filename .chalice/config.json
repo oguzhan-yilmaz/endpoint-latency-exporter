@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "app_name": "endpoint-latency-exporter",
+  "environment_variables": {
+    "ENDPOINT_LIST": "https://api.binance.com,https://api-gcp.binance.com,https://api1.binance.com,https://api2.binance.com,https://api3.binance.com,https://api4.binance.com",
+    "PUSHGATEWAY_ENDPOINT": "https://pgw.zabumafu.dev/",
+    "LAMBDA_RATE_MINUTES": "4",
+    "PUSHGATEWAY_USERNAME": "delete-these-env-vars",
+    "PUSHGATEWAY_PASSWORD": "if-pushgateway-doesnt-have-basic-auth"
+  },
+  "lambda_functions": {
+    "latency-exporter": {
+      "lambda_timeout": 60
+    }
+  },
+  "stages": {
+    "us-west-1": {
+    },
+    "us-west-2": {
+    }, 
+    "us-east-1": {
+    },
+    "us-east-2": {
+    }, 
+    "eu-west-1": {
+    },
+    "eu-west-2": {
+    },
+    "eu-central-1": {
+    }
+  }
+}
